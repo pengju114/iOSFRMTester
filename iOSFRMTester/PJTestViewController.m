@@ -48,19 +48,19 @@
 */
 
 - (IBAction)testHttpRequest:(id)sender {
-    ASIHTTPRequest *req = [self requestWithRequestCode:1 url:@"http://192.168.3.210:8084/web/client.service?service=10001&dataType=JSON" expectedDataFormat:kASIExpectedDataString responseDataFormat:kASIResponseDataJSON extraData:nil parameterPairs:@"name",@"pengju",nil];
+    ASIHTTPRequest *req = [self requestWithRequestCode:1 url:@"http://192.168.1.103:8080/web-framework/client.service?service=10001&dataType=JSON" expectedDataFormat:kASIExpectedDataDictionary responseDataFormat:kASIResponseDataJSON extraData:nil parameterPairs:@"name",@"pengju",nil];
     
     [self asyncRequest:req];
 }
 
 -(void) httpDidResponse:(ASIHTTPRequest *)request withResult:(HttpResult *)result{
     if ([self isHttpSuccessAndNotify:result]) {
-        [self showMessage:[result responseData]];
+        _resultText.text = [[result responseData] description];
     }
 }
 
 -(void)httpDidFailure:(NSString *)reason{
-    [self showMessage:reason];
+    _resultText.text = reason;
 }
 
 @end
