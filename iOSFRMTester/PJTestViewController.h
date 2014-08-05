@@ -11,6 +11,8 @@
 
 @interface PJTestViewController : CoreViewController
 - (IBAction)testHttpRequest:(id)sender;
+- (IBAction)testConfirm:(id)sender;
+- (IBAction)testInput:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *resultText;
 
 @end

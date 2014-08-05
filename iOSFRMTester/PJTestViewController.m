@@ -53,6 +53,15 @@
     [self asyncRequest:req];
 }
 
+- (IBAction)testConfirm:(id)sender {
+    [self showMessage:[self showConfirmMessage:@"确定？" message:@"choose" delegate:nil]?@"YES":@"NO"];
+}
+
+- (IBAction)testInput:(id)sender {
+    
+    [self showMessage:[self showInputMessage:@"输入" initialText:@"" placeholder:@"input your text" secure:NO delegate:nil]];
+}
+
 -(void) httpDidResponse:(ASIHTTPRequest *)request withResult:(HttpResult *)result{
     if ([self isHttpSuccessAndNotify:result]) {
         _resultText.text = [[result responseData] description];
