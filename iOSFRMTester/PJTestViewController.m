@@ -72,4 +72,8 @@
     _resultText.text = reason;
 }
 
+- (IBAction)testProgressMessage:(id)sender {
+    
+    [self showProgressMessage:@"哈哈收到了后来说；哦i"];
+}
 @end

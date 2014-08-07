@@ -14,5 +14,6 @@
 - (IBAction)testConfirm:(id)sender;
 - (IBAction)testInput:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *resultText;
+- (IBAction)testProgressMessage:(id)sender;
 
 @end
