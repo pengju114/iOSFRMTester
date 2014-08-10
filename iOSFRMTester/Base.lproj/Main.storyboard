@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Uqm-Q4-sbg">
-                                <rect key="frame" x="20" y="261.99999927626021" width="280" height="286"/>
+                                <rect key="frame" x="20" y="262" width="280" height="285.99999933309482"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -75,6 +75,27 @@
                                     <action selector="testProgressMessage:" destination="3kB-Wz-HSa" eventType="touchUpInside" id="0CN-QJ-93e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9kI-qp-fTj">
+                                <rect key="frame" x="108" y="218" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Progress">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testProgress:" destination="3kB-Wz-HSa" eventType="touchUpInside" id="NuG-nU-1KU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="IJK-FM-HPk">
+                                <rect key="frame" x="20" y="517.99999933309482" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEnd" id="9ey-iN-6YM"/>
+                                    <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidBegin" id="FzU-RR-Wwv"/>
+                                    <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEndOnExit" id="bsE-7W-aJv"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

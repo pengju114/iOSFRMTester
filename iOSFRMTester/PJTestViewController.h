@@ -15,5 +15,9 @@
 - (IBAction)testInput:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *resultText;
 - (IBAction)testProgressMessage:(id)sender;
+- (IBAction)testProgress:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *outer;
+@property (weak, nonatomic) IBOutlet UIView *inner;
+- (IBAction)testCorrectView:(id)sender;
 
 @end

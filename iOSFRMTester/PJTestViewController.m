@@ -8,6 +8,7 @@
 
 #import "PJTestViewController.h"
 #import <pjcore/HttpResult.h>
+#import <pjcore/UIView+Extension.h>
 
 @interface PJTestViewController ()
 
@@ -28,6 +29,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIView *v = [self.view viewWithTag:1000];
+    NSLog(@"%@",v);
+    
+    NSLog(@"%@",NSStringFromCGRect([_inner frameInView:_outer]));
+    NSLog(@"%@",NSStringFromCGRect([_inner frameInView:self.view]));
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +81,54 @@
 
 - (IBAction)testProgressMessage:(id)sender {
     
-    [self showProgressMessage:@"哈哈收到了后来说；哦i"];
+    [self showProgressMessage:[NSString stringWithFormat:@"哈哈收 %f 到",[[NSDate date] timeIntervalSince1970]]];
+    [self performSelector:@selector(showProgressMessage:) withObject:@"你猜猜吧" afterDelay:0.8];
+    [self performSelector:@selector(closeProgressMessage) withObject:nil afterDelay:2];
+    [self performSelector:@selector(showProgressMessage:) withObject:@"新的文字" afterDelay:2.1];
+    [self performSelector:@selector(closeProgressMessage) withObject:nil afterDelay:4];
+    [self performSelector:@selector(closeProgressMessage) withObject:nil afterDelay:4.2];
+    
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
+    v.backgroundColor = [UIColor redColor];
+    
+    [self performSelector:@selector(showProgressMessageWithView:) withObject:v afterDelay:1];
+    
+    [self performSelector:@selector(closeProgressMessage) withObject:nil afterDelay:2];
+    
+    [self performSelector:@selector(showProgressMessage:) withObject:@"新的文字" afterDelay:3];
+    [self performSelector:@selector(closeProgressMessage) withObject:nil afterDelay:5];
+    
 }
+
+- (IBAction)testProgress:(id)sender {
+    [self showProgress:NO];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [NSThread sleepForTimeInterval:2];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self showProgress:YES];
+        });
+    });
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [NSThread sleepForTimeInterval:4];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self showProgress:NO];
+        });
+    });
+    
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [NSThread sleepForTimeInterval:6];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self closeProgress];
+            [self closeProgress];
+            [self closeProgress];
+        });
+    });
+}
+
+- (IBAction)testCorrectView:(id)sender {
+    [self correctViewAvoidingKeyboardShelter:sender];
+}
+
 @end
