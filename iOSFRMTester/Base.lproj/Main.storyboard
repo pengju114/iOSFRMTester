@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Uqm-Q4-sbg">
-                                <rect key="frame" x="20" y="262" width="280" height="285.99999933309482"/>
+                                <rect key="frame" x="20" y="261.99999868848687" width="280" height="286"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="IJK-FM-HPk">
-                                <rect key="frame" x="20" y="517.99999933309482" width="280" height="30"/>
+                                <rect key="frame" x="20" y="517.99999868848681" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -96,6 +96,35 @@
                                     <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEndOnExit" id="bsE-7W-aJv"/>
                                 </connections>
                             </textField>
+                            <view contentMode="scaleToFill" id="CFL-FR-wGr">
+                                <rect key="frame" x="0.0" y="342" width="320" height="125"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="i44-Jl-eoH">
+                                        <rect key="frame" x="20" y="0.0" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEndOnExit" id="0Kv-dG-xqr"/>
+                                            <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEnd" id="JaA-73-tm1"/>
+                                            <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidBegin" id="osJ-pc-Wph"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="x3Q-Ut-4Pt">
+                                        <rect key="frame" x="20" y="75" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidBegin" id="TOb-Ev-0UZ"/>
+                                            <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEnd" id="bO0-Gv-D8c"/>
+                                            <action selector="testCorrectView:" destination="3kB-Wz-HSa" eventType="editingDidEndOnExit" id="x4N-mP-PzZ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
