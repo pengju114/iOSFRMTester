@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Uqm-Q4-sbg">
-                                <rect key="frame" x="20" y="261.99999868848687" width="280" height="286"/>
+                                <rect key="frame" x="20" y="262" width="280" height="285.99999933309482"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="IJK-FM-HPk">
-                                <rect key="frame" x="20" y="517.99999868848681" width="280" height="30"/>
+                                <rect key="frame" x="20" y="517.99999933309482" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -128,7 +128,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mMn-a5-wWZ"/>
+                    <navigationItem key="navigationItem" id="mMn-a5-wWZ">
+                        <barButtonItem key="rightBarButtonItem" title="next" id="v0n-KP-15B">
+                            <connections>
+                                <segue destination="xZX-MP-S2i" kind="push" id="ycP-2y-g3E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="resultText" destination="Uqm-Q4-sbg" id="Yhk-s6-9wB"/>
                     </connections>
@@ -136,6 +142,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlN-2E-dN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="147" y="43"/>
+        </scene>
+        <!--Second View Controller - 滚动输入框-->
+        <scene sceneID="gIv-34-rD2">
+            <objects>
+                <viewController id="xZX-MP-S2i" customClass="PJSecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ixd-ff-XMx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5aK-tK-ECo">
+                                <rect key="frame" x="-9" y="-10" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="SfR-22-C7J">
+                                        <rect key="frame" x="20" y="417" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editEnd:" destination="xZX-MP-S2i" eventType="editingDidEndOnExit" id="ryc-13-Fdu"/>
+                                            <action selector="testCorrect:" destination="xZX-MP-S2i" eventType="editingDidBegin" id="fZ0-ie-95u"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Bff-3n-9fC">
+                                        <rect key="frame" x="20" y="466" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editEnd:" destination="xZX-MP-S2i" eventType="editingDidEndOnExit" id="gHK-l7-2HP"/>
+                                            <action selector="testCorrect:" destination="xZX-MP-S2i" eventType="editingDidBegin" id="fyE-Rh-syP"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="a2S-Zx-4qd">
+                                        <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editEnd:" destination="xZX-MP-S2i" eventType="editingDidEndOnExit" id="y6R-EE-SMz"/>
+                                            <action selector="testCorrect:" destination="xZX-MP-S2i" eventType="editingDidBegin" id="fZ2-Ty-GMr"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="滚动输入框" id="0T5-9L-pBM"/>
+                    <connections>
+                        <outlet property="scrollView" destination="5aK-tK-ECo" id="1Rx-Y8-Sb7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGL-NQ-4k4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="43"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

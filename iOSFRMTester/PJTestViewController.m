@@ -29,12 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    UIView *v = [self.view viewWithTag:1000];
-    NSLog(@"%@",v);
-    
-    NSLog(@"%@",NSStringFromCGRect([_inner frameInView:_outer]));
-    NSLog(@"%@",NSStringFromCGRect([_inner frameInView:self.view]));
+    if (IOSVersion >= 7.0) {
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning
