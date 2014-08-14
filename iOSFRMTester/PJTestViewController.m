@@ -74,6 +74,7 @@
 
 -(void)httpDidFailure:(NSString *)reason{
     _resultText.text = reason;
+    [self closeProgress];
 }
 
 - (IBAction)testProgressMessage:(id)sender {
@@ -124,8 +125,20 @@
     });
 }
 
+-(void)httpRequestCountDidChange:(int)count{
+    if (count>0) {
+        [self showProgress:NO];
+    }else{
+        [self closeProgress];
+    }
+}
+
 - (IBAction)testCorrectView:(id)sender {
     [self correctViewAvoidingKeyboardShelter:sender];
+}
+
+- (IBAction)stopHttp:(id)sender {
+    [self stopAllAsyncRequest];
 }
 
 @end

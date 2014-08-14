@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *outer;
 @property (weak, nonatomic) IBOutlet UIView *inner;
 - (IBAction)testCorrectView:(id)sender;
+- (IBAction)stopHttp:(id)sender;
 
 @end

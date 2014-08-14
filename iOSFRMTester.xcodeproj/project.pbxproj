@@ -30,6 +30,7 @@
 		9C2F3A86198F50D7003CA6E0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2F3A85198F50D7003CA6E0 /* CFNetwork.framework */; };
 		9C2F3A88198F50F5003CA6E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2F3A87198F50F5003CA6E0 /* SystemConfiguration.framework */; };
 		9C2F3A8A198F50FD003CA6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2F3A89198F50FD003CA6E0 /* Security.framework */; };
+		9C812DEB199CFAD9009B2F2A /* PJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C812DEA199CFAD9009B2F2A /* PJLoginViewController.m */; };
 		9CE62E001999136B00734B8C /* pjcore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE62DFF1999136B00734B8C /* pjcore.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		9C2F3A85198F50D7003CA6E0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9C2F3A87198F50F5003CA6E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9C2F3A89198F50FD003CA6E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9C812DE9199CFAD9009B2F2A /* PJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJLoginViewController.h; sourceTree = "<group>"; };
+		9C812DEA199CFAD9009B2F2A /* PJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJLoginViewController.m; sourceTree = "<group>"; };
 		9CE62DFF1999136B00734B8C /* pjcore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pjcore.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/PJFramework-hfldkyrrafjgmlbbfrfpwazxwwac/Build/Products/Debug-iphonesimulator/pjcore.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +164,8 @@
 				9C2F392A198F316B003CA6E0 /* PJTestViewController.m */,
 				9C1729D4199BC27E002B45FA /* PJSecondViewController.h */,
 				9C1729D5199BC27E002B45FA /* PJSecondViewController.m */,
+				9C812DE9199CFAD9009B2F2A /* PJLoginViewController.h */,
+				9C812DEA199CFAD9009B2F2A /* PJLoginViewController.m */,
 			);
 			path = iOSFRMTester;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C812DEB199CFAD9009B2F2A /* PJLoginViewController.m in Sources */,
 				9C2F3901198F18C2003CA6E0 /* PJAppDelegate.m in Sources */,
 				9C2F3907198F18C2003CA6E0 /* PJViewController.m in Sources */,
 				9C2F392B198F316B003CA6E0 /* PJTestViewController.m in Sources */,
