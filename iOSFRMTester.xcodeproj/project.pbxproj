@@ -31,7 +31,7 @@
 		9C2F3A88198F50F5003CA6E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2F3A87198F50F5003CA6E0 /* SystemConfiguration.framework */; };
 		9C2F3A8A198F50FD003CA6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2F3A89198F50FD003CA6E0 /* Security.framework */; };
 		9C812DEB199CFAD9009B2F2A /* PJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C812DEA199CFAD9009B2F2A /* PJLoginViewController.m */; };
-		9CE62E001999136B00734B8C /* pjcore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE62DFF1999136B00734B8C /* pjcore.framework */; };
+		9C8ACF0B19EFFAC300CC4B3D /* pjcore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8ACF0A19EFFAC300CC4B3D /* pjcore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 		9C2F3A89198F50FD003CA6E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9C812DE9199CFAD9009B2F2A /* PJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJLoginViewController.h; sourceTree = "<group>"; };
 		9C812DEA199CFAD9009B2F2A /* PJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJLoginViewController.m; sourceTree = "<group>"; };
-		9CE62DFF1999136B00734B8C /* pjcore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pjcore.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/PJFramework-hfldkyrrafjgmlbbfrfpwazxwwac/Build/Products/Debug-iphonesimulator/pjcore.framework"; sourceTree = "<group>"; };
+		9C8ACF0A19EFFAC300CC4B3D /* pjcore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pjcore.framework; path = "../PJFramework/build/Debug-iphoneos/pjcore.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 				9C2F3A86198F50D7003CA6E0 /* CFNetwork.framework in Frameworks */,
 				9C2F3A84198F50CF003CA6E0 /* MobileCoreServices.framework in Frameworks */,
 				9C2F3A82198F3A88003CA6E0 /* libsqlite3.dylib in Frameworks */,
-				9CE62E001999136B00734B8C /* pjcore.framework in Frameworks */,
+				9C8ACF0B19EFFAC300CC4B3D /* pjcore.framework in Frameworks */,
 				9C2F3A80198F3A62003CA6E0 /* libxml2.dylib in Frameworks */,
 				9C2F3A7E198F3A5B003CA6E0 /* libz.dylib in Frameworks */,
 				9C2F38F3198F18C2003CA6E0 /* CoreGraphics.framework in Frameworks */,
@@ -134,7 +134,7 @@
 		9C2F38EF198F18C2003CA6E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CE62DFF1999136B00734B8C /* pjcore.framework */,
+				9C8ACF0A19EFFAC300CC4B3D /* pjcore.framework */,
 				9C2F3A89198F50FD003CA6E0 /* Security.framework */,
 				9C2F3A87198F50F5003CA6E0 /* SystemConfiguration.framework */,
 				9C2F3A85198F50D7003CA6E0 /* CFNetwork.framework */,
@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = pj;
 				TargetAttributes = {
+					9C2F38EC198F18C2003CA6E0 = {
+						DevelopmentTeam = V9QZ497YV9;
+					};
 					9C2F390D198F18C2003CA6E0 = {
 						TestTargetID = 9C2F38EC198F18C2003CA6E0;
 					};
@@ -427,19 +430,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zhang huichao (B84K9K5YWT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PJFramework-fhwlpymzmqqsoydttjgvzvksisfi/Build/Products/Debug-iphoneos",
-					/Users/luzhenwen/Desktop,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ASIHttp-eyhhipcwktdllybiumfasghykrxr/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PJFramework-hfldkyrrafjgmlbbfrfpwazxwwac/Build/Products/Debug-iphonesimulator",
-				);
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lingling Wu (DB544U6649)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lingling Wu (DB544U6649)";
+				CONFIGURATION_BUILD_DIR = "../$(PROJECT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "/Users/luzhenwen/Documents/dist/Working/Projects/Xcode/PJFramework/build/Debug-iphoneos";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSFRMTester/iOSFRMTester-Prefix.pch";
 				INFOPLIST_FILE = "iOSFRMTester/iOSFRMTester-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A3F13576-4CE3-48BE-A6E8-83A16BE72111";
+				PROVISIONING_PROFILE = "8ae30899-a6ec-46a4-b1da-7332653af860";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -450,13 +449,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Excelsecu Data Technology Co., Ltd.";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PJFramework-fhwlpymzmqqsoydttjgvzvksisfi/Build/Products/Debug-iphoneos",
-					/Users/luzhenwen/Desktop,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ASIHttp-eyhhipcwktdllybiumfasghykrxr/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PJFramework-hfldkyrrafjgmlbbfrfpwazxwwac/Build/Products/Debug-iphonesimulator",
-				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Excelsecu Data Technology Co., Ltd.";
+				CONFIGURATION_BUILD_DIR = "../$(PROJECT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "/Users/luzhenwen/Documents/dist/Working/Projects/Xcode/PJFramework/build/Debug-iphoneos";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSFRMTester/iOSFRMTester-Prefix.pch";
 				INFOPLIST_FILE = "iOSFRMTester/iOSFRMTester-Info.plist";
