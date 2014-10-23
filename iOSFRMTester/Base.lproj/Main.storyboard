@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aWO-0W-ctV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aWO-0W-ctV">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-295" y="39"/>
         </scene>
-        <!--Test View Controller - 测试页面-->
+        <!--测试页面-->
         <scene sceneID="tJG-ej-r0C">
             <objects>
                 <viewController title="测试页面" id="3kB-Wz-HSa" customClass="PJTestViewController" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Uqm-Q4-sbg">
-                                <rect key="frame" x="20" y="261.99999868848687" width="280" height="286"/>
+                                <rect key="frame" x="20" y="262" width="280" height="286"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="IJK-FM-HPk">
-                                <rect key="frame" x="20" y="517.99999868848681" width="280" height="30"/>
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -153,7 +153,7 @@
             </objects>
             <point key="canvasLocation" x="147" y="43"/>
         </scene>
-        <!--Second View Controller - 滚动输入框-->
+        <!--滚动输入框-->
         <scene sceneID="gIv-34-rD2">
             <objects>
                 <viewController id="xZX-MP-S2i" customClass="PJSecondViewController" sceneMemberID="viewController">
@@ -215,7 +215,7 @@
             </objects>
             <point key="canvasLocation" x="518" y="43"/>
         </scene>
-        <!--Login View Controller - 登录测试-->
+        <!--登录测试-->
         <scene sceneID="P4q-af-ejE">
             <objects>
                 <viewController id="O62-It-nuo" customClass="PJLoginViewController" sceneMemberID="viewController">
@@ -253,7 +253,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="登录测试" id="3w7-lG-jND"/>
+                    <navigationItem key="navigationItem" title="登录测试" id="3w7-lG-jND">
+                        <barButtonItem key="rightBarButtonItem" title="数据库" id="aGU-lS-99g">
+                            <connections>
+                                <segue destination="7ax-RX-VOV" kind="push" id="6Si-u3-5Pm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="result" destination="iin-RZ-WLU" id="gu8-40-iN1"/>
                     </connections>
@@ -261,6 +267,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqk-yX-RDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="883" y="43"/>
+        </scene>
+        <!--数据库测试-->
+        <scene sceneID="qJj-K9-wIQ">
+            <objects>
+                <viewController id="7ax-RX-VOV" customClass="PJDatabaseViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UPB-F9-7Yf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YBG-14-Eyv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7ax-RX-VOV" id="sfU-aL-D9b"/>
+                                    <outlet property="delegate" destination="7ax-RX-VOV" id="W9h-zV-Zzn"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="w7r-yD-KDj">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="添加一行" id="ZMO-iI-clS">
+                                        <connections>
+                                            <action selector="addUser:" destination="7ax-RX-VOV" id="jQ0-XK-P6K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OFT-cn-RJR"/>
+                                    <barButtonItem title="随机删除" id="uyO-Yj-Huz">
+                                        <connections>
+                                            <action selector="deleteUser:" destination="7ax-RX-VOV" id="Vh7-t7-kj3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QMH-bG-kuq"/>
+                                    <barButtonItem title="添加10行" id="dpP-LM-bHD">
+                                        <connections>
+                                            <action selector="addTenUser:" destination="7ax-RX-VOV" id="AoO-52-hPD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="数据库测试" id="jfh-dW-PWO"/>
+                    <connections>
+                        <outlet property="tableView" destination="YBG-14-Eyv" id="wG8-NA-lA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbt-t0-V6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217" y="44"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

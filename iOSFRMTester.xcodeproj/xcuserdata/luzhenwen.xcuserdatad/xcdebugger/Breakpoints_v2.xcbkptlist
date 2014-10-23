@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../PJFramework/pjcore/CoreViewController.m"
-            timestampString = "435255731.994714"
+            timestampString = "435750957.216002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "-correctView"
             landmarkType = "5">
          </BreakpointContent>
